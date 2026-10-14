@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Ask Anuj — local demo host</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Times New Roman',Times,serif;background:#000;color:#fff;min-height:200vh;padding:80px 24px}
+body.light-mode{background:#fff;color:#000}
+h1{font-weight:400;font-size:44px} p{max-width:560px;margin-top:14px;opacity:.7}
+button.theme{position:fixed;top:12px;right:40px;z-index:1000;padding:6px 12px;background:transparent;color:inherit;border:1px solid currentColor;border-radius:8px;font:inherit}
+.back-to-top{position:fixed;bottom:25px;right:25px;z-index:1000;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff}
+body.light-mode .back-to-top{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.15);color:#000}
+</style></head>
+<body class="content-loaded">
+<button class="theme" onclick="document.body.classList.toggle('light-mode')">Toggle theme</button>
+<h1>ANUJ WADI</h1><p>Stand-in for the portfolio, used to test the widget locally. The real integration is one script tag (see docs/INTEGRATION.md).</p>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script>var s=document.createElement("script");s.src="/embed.js?dev="+Date.now();document.body.appendChild(s);</script><!-- production: <script src="https://HOST/embed.js" defer></script> -->
+</body></html>

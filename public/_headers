@@ -1,0 +1,11 @@
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'
+/embed.js
+  Cache-Control: public, max-age=300
+  X-Content-Type-Options: nosniff
+/*
+  X-Robots-Tag: noindex

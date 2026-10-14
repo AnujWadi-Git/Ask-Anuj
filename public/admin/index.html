@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ask Anuj — Visitors</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main>
+  <h1>Ask Anuj — visitor sessions</h1>
+  <p class="scope" id="scope">Owner only. Enter your admin token to view. Data shown here is <strong>Ask Anuj sessions</strong>, not total website traffic.</p>
+  <form id="login">
+    <label for="token">Admin token</label>
+    <input id="token" type="password" autocomplete="off" required>
+    <button type="submit">View sessions</button>
+  </form>
+  <p id="error" role="alert" class="error" hidden></p>
+  <section id="data" hidden>
+    <ul class="totals" id="totals"></ul>
+    <table>
+      <thead><tr><th>Started (your time)</th><th>Name</th><th>Role</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <button id="logout" type="button">Hide &amp; forget token</button>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

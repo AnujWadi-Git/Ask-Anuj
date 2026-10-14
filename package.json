@@ -7,8 +7,7 @@
   "scripts": {
     "build:knowledge": "node scripts/build-knowledge.mjs",
     "test": "node scripts/build-knowledge.mjs --check && node --test test/*.test.mjs",
-    "dev": "npm run build:knowledge && wrangler pages dev public --d1 DB=ask-anuj --compatibility-date=2025-09-01 --port 8788",
-    "db:init:local": "wrangler d1 execute ask-anuj --local --file=schema.sql",
+    "dev": "npm run build:knowledge && node scripts/dev.mjs",
     "db:init:remote": "wrangler d1 execute ask-anuj --remote --file=schema.sql",
     "deploy": "npm run build:knowledge && wrangler pages deploy public --project-name=ask-anuj"
   },

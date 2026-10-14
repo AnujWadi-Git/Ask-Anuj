@@ -1,0 +1,19 @@
+:root{color-scheme:dark light;--bg:#000;--fg:#fff;--muted:#aaa;--line:#333}
+@media(prefers-color-scheme:light){:root{--bg:#fff;--fg:#000;--muted:#555;--line:#ccc}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.5 'Times New Roman',Times,serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px}
+h1{font-weight:400;font-size:28px;margin:0 0 8px}
+.scope{color:var(--muted)}
+label{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+input{width:100%;max-width:360px;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--fg);font:inherit}
+button{height:44px;padding:0 20px;margin-top:12px;border-radius:22px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);font:inherit;cursor:pointer}
+#logout{background:transparent;color:var(--fg);margin-top:20px}
+.error{color:#ff8a80}
+.totals{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0}
+.totals li{border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.totals b{display:block;font-size:26px;font-weight:400}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+th{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:400}
+td.anon{color:var(--muted);font-style:italic}
+@media(max-width:520px){th:nth-child(1),td:nth-child(1){font-size:14px}}
