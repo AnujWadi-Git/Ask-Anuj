@@ -7,9 +7,7 @@
   "scripts": {
     "build:knowledge": "node scripts/build-knowledge.mjs",
     "test": "node scripts/build-knowledge.mjs --check && node --test test/*.test.mjs",
-    "dev": "npm run build:knowledge && node scripts/dev.mjs",
-    "db:init:remote": "wrangler d1 execute ask-anuj --remote --file=schema.sql",
-    "deploy": "npm run build:knowledge && wrangler pages deploy public --project-name=ask-anuj"
+    "dev": "npm run build:knowledge && node scripts/dev.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

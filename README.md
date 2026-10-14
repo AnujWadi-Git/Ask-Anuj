@@ -4,12 +4,13 @@ Voice-first AI representative for [anujwadi.com](https://anujwadi.com). Visitors
 themselves, then talk (or type) to an AI that answers **only** from approved professional content and offers verified links.
 
 * Product brief, site inspection, verified free-tier limits, architecture: [docs/PRODUCT_BRIEF.md](docs/PRODUCT_BRIEF.md)
-* Deploy to Cloudflare (free): [docs/DEPLOY.md](docs/DEPLOY.md)
+* Deploy online to Cloudflare (free, dashboard only, nothing to run locally): [docs/DEPLOY.md](docs/DEPLOY.md)
 * Add to the portfolio (one script tag): [docs/INTEGRATION.md](docs/INTEGRATION.md)
 * Update what it knows: [docs/UPDATING_KNOWLEDGE.md](docs/UPDATING_KNOWLEDGE.md)
 * Testing and known limitations: [docs/TESTING.md](docs/TESTING.md)
 
 ```bash
+# Optional, local development only (not needed to deploy)
 npm install
 npm test          # unit + API tests (in-memory SQLite stand-in for D1, fake Workers AI)
 npm run dev       # local server at http://localhost:8788/demo.html with the mock provider (no Cloudflare login)
