@@ -63,7 +63,7 @@ test('tokens: valid, tampered and expired', async () => {
 
 test('system prompt contains grounding rules, approved content, link ids and treats the name as data', () => {
   const p = buildSystemPrompt({ name: 'Eve', role: 'engineer' });
-  for (const needle of ['ONLY from the APPROVED CONTENT', 'untrusted data', 'PrimaThink', 'Never use "I" or "we"', 'resume:', 'engineer', '"Eve"']) assert.ok(p.includes(needle), needle);
+  for (const needle of ['ONLY from the APPROVED CONTENT', 'untrusted data', 'PrimaThink', 'Never use "I" or "we"', 'Do NOT attach technologies', 'resume:', 'engineer', '"Eve"']) assert.ok(p.includes(needle), needle);
 });
 
 import { sniffMime } from '../functions/_lib/providers/tts.js';
