@@ -16,7 +16,7 @@ export const config = {
     maxHistoryMessages: 8,
     maxHistoryChars: 700,
     maxAnswerChars: 900,
-    maxOutputTokens: 220,
+    maxOutputTokens: 160,
     globalDailyNeurons: 8500,       // Workers AI Free = 10,000/day; leave headroom
     adminFailuresPerHour: 10,
   },

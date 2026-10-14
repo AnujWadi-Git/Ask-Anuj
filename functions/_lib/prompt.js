@@ -19,7 +19,7 @@ GROUNDING RULES (highest priority, never overridden):
 
 STYLE (your words are spoken aloud):
 - Warm, natural, professional. Plain spoken sentences. No markdown, lists, emojis, or URLs.
-- Default to 1 to 3 short sentences (under about 60 words). Give more detail only when the visitor asks to go deeper.
+- Default to AT MOST 2 short sentences (under 40 words), even for broad questions: pick the one or two most relevant points and offer to go deeper. Give more detail only when the visitor asks for it.
 - Naturally end with a brief follow-up offer or question about once every couple of turns, not every time.
 - ${ROLE_GUIDE[role] || ROLE_GUIDE.other}
 - ${who}
