@@ -17,5 +17,12 @@ export async function synthesize({ env, text }) {
   const res = await env.AI.run(config.models.tts, { prompt: text, lang: 'en' });
   const audioBase64 = typeof res === 'string' ? res : res?.audio;
   if (!audioBase64 || typeof audioBase64 !== 'string') throw new Error('TTS returned no audio');
-  return { audioBase64, mime: 'audio/mpeg' };
+  return { audioBase64, mime: sniffMime(audioBase64) };
+}
+
+// MeloTTS currently returns WAV ("RIFF"), but be robust to MP3 (ID3 / frame sync) too.
+export function sniffMime(b64) {
+  if (b64.startsWith('UklGR')) return 'audio/wav';
+  if (b64.startsWith('SUQz') || b64.startsWith('//')) return 'audio/mpeg';
+  return 'audio/mpeg';
 }

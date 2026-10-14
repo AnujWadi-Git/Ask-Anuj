@@ -65,3 +65,9 @@ test('system prompt contains grounding rules, approved content, link ids and tre
   const p = buildSystemPrompt({ name: 'Eve', role: 'engineer' });
   for (const needle of ['ONLY from the APPROVED CONTENT', 'untrusted data', 'PrimaThink', 'resume:', 'engineer', '"Eve"']) assert.ok(p.includes(needle), needle);
 });
+
+import { sniffMime } from '../functions/_lib/providers/tts.js';
+test('tts mime is sniffed from the audio bytes, not assumed', () => {
+  assert.equal(sniffMime('UklGRl5RAwBXQVZF'), 'audio/wav');
+  assert.equal(sniffMime('SUQzBAAAAAAA'), 'audio/mpeg');
+});
