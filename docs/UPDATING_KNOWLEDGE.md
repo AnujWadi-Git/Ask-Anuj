@@ -8,7 +8,7 @@ Answers come **only** from two files:
 Workflow
 ```bash
 # edit the files, then
-npm run build:knowledge   # validates ids / https, regenerates functions/_generated/knowledge.json
+npm run build:knowledge   # validates ids / https, regenerates functions/_generated/knowledge.js
 npm test
 git add -A && git commit -m "knowledge: ..." && git push
 npm run deploy

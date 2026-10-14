@@ -1,4 +1,4 @@
-import knowledge from '../_generated/knowledge.json' with { type: 'json' };
+import knowledge from '../_generated/knowledge.js';
 
 export const getKnowledge = () => knowledge;
 
