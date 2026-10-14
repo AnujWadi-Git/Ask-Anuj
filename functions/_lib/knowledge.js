@@ -26,7 +26,7 @@ export function resolveLinks(ids, k = knowledge, max = 3) {
 }
 
 // Splits "answer text\nLINKS: a, b" into plain speech text and link ids; strips markdown the TTS would read aloud.
-export function parseModelOutput(raw, maxChars = 900) {
+export function parseModelOutput(raw, maxChars = 900, maxWords = Infinity) {
   let text = String(raw || '').replace(/\r/g, '');
   let ids = [];
   const m = text.match(/^\s*LINKS:\s*(.*)$/im);
@@ -45,5 +45,19 @@ export function parseModelOutput(raw, maxChars = 900) {
     const cut = text.slice(0, maxChars);
     text = cut.slice(0, Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('? '), cut.lastIndexOf('! ')) + 1 || maxChars).trim();
   }
+  text = limitWords(text, maxWords);
   return { text, ids };
+}
+
+// Keep whole sentences until the word budget is reached (always keeps the first sentence).
+export function limitWords(text, maxWords) {
+  if (text.split(/\s+/).length <= maxWords) return text;
+  const sentences = text.match(/[^.!?]+[.!?]+(\s|$)|[^.!?]+$/g) || [text];
+  let out = '', words = 0;
+  for (const sent of sentences) {
+    const n = sent.trim().split(/\s+/).length;
+    if (out && words + n > maxWords) break;
+    out += sent; words += n;
+  }
+  return out.trim();
 }

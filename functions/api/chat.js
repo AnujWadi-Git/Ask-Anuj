@@ -29,7 +29,8 @@ export async function onRequestPost({ request, env }) {
   }
   await spend(env, llmNeurons(result.model, result.inTokens, result.outTokens));
 
-  const { text, ids } = parseModelOutput(result.text, config.limits.maxAnswerChars);
+  const wantsDetail = /\b(more|detail|detailed|deeper|elaborate|explain|walk me through|in depth)\b/i.test(message);
+  const { text, ids } = parseModelOutput(result.text, config.limits.maxAnswerChars, wantsDetail ? config.limits.maxDetailWords : config.limits.maxSpokenWords);
   if (!text) throw new HttpError(502, 'empty_answer', 'I did not get an answer. Please try rephrasing.');
   return json({ answer: text, links: resolveLinks(ids) });
 }

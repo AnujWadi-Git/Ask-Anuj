@@ -71,3 +71,11 @@ test('tts mime is sniffed from the audio bytes, not assumed', () => {
   assert.equal(sniffMime('UklGRl5RAwBXQVZF'), 'audio/wav');
   assert.equal(sniffMime('SUQzBAAAAAAA'), 'audio/mpeg');
 });
+
+import { limitWords } from '../functions/_lib/knowledge.js';
+test('limitWords keeps whole sentences within the budget and never returns empty', () => {
+  const t = 'One two three four five. Six seven eight nine ten. Eleven twelve thirteen fourteen fifteen.';
+  assert.equal(limitWords(t, 10), 'One two three four five. Six seven eight nine ten.');
+  assert.equal(limitWords(t, 3), 'One two three four five.');
+  assert.equal(limitWords(t, 100), t);
+});
