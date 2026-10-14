@@ -1,0 +1,52 @@
+// Compiles knowledge/profile.md + knowledge/links.json into functions/_generated/knowledge.json
+// and validates that every referenced link exists and every URL is https.
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const out = join(root, 'functions/_generated/knowledge.json');
+
+export function compile(md, linksRaw) {
+  const links = Object.fromEntries(Object.entries(linksRaw).filter(([k]) => !k.startsWith('_')));
+  for (const [id, l] of Object.entries(links)) {
+    if (!/^[a-z0-9-]+$/.test(id)) throw new Error(`bad link id: ${id}`);
+    const u = new URL(l.url);
+    if (u.protocol !== 'https:') throw new Error(`link ${id} must be https`);
+    if (!l.label) throw new Error(`link ${id} needs a label`);
+  }
+  const body = md.replace(/<!--[\s\S]*?-->/g, '');
+  const sections = [];
+  for (const chunk of body.split(/^## /m).slice(1)) {
+    const [titleLine, ...rest] = chunk.split('\n');
+    let lines = rest;
+    let ids = [];
+    const idx = lines.findIndex((l) => l.trim().length);
+    if (idx >= 0 && /^links:/i.test(lines[idx].trim())) {
+      ids = lines[idx].trim().slice(6).split(',').map((s) => s.trim()).filter(Boolean);
+      lines = lines.slice(idx + 1);
+    }
+    for (const id of ids) if (!links[id]) throw new Error(`section "${titleLine.trim()}" references unknown link "${id}"`);
+    sections.push({ title: titleLine.trim(), links: ids, text: lines.join('\n').trim() });
+  }
+  if (!sections.length) throw new Error('no sections found in profile.md');
+  return { sections, links };
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const data = compile(
+    readFileSync(join(root, 'knowledge/profile.md'), 'utf8'),
+    JSON.parse(readFileSync(join(root, 'knowledge/links.json'), 'utf8')),
+  );
+  const json = JSON.stringify(data, null, 2) + '\n';
+  if (process.argv.includes('--check')) {
+    if (!existsSync(out) || readFileSync(out, 'utf8') !== json) {
+      console.error('functions/_generated/knowledge.json is stale. Run: npm run build:knowledge');
+      process.exit(1);
+    }
+    console.log(`knowledge OK (${data.sections.length} sections, ${Object.keys(data.links).length} links)`);
+  } else {
+    writeFileSync(out, json);
+    console.log(`wrote ${out} (${data.sections.length} sections, ${Object.keys(data.links).length} links)`);
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "sections": [
+    {
+      "title": "Summary",
+      "links": [
+        "site",
+        "resume",
+        "github",
+        "linkedin"
+      ],
+      "text": "Anuj Wadi is a Software Engineer and AI/ML Engineer with an MS in Robotics and Autonomous Systems (AI) from Arizona State University. He likes building things that actually get used, not just demoed. He built an AI-assisted Blood Bank Management System that is now running in 3 hospitals, and a multimodal AI agent that pulls from live data sources so it answers from real information instead of guessing. Most of his work sits at the intersection of agentic AI, applied machine learning, and robotics: writing the backend, training the model, and getting it into someone's hands."
+    },
+    {
+      "title": "Skills",
+      "links": [
+        "resume"
+      ],
+      "text": "- Languages: Python, Java, C++, TypeScript, SQL.\n- Core CS: Data Structures and Algorithms, Object-Oriented Programming (OOP), ROS, Motion Planning.\n- Agentic AI: MCP, LLM APIs, Agentic Workflows, Prompt Engineering.\n- Backend and Cloud: REST APIs, Pandas, AWS, GCP, Docker, Kubernetes, Terraform.\n- Machine Learning: Scikit-learn, Random Forest, Gradient Boosting, Regression Models."
+    },
+    {
+      "title": "Experience: AI Full Stack Engineer at PrimaThink Technologies Limited (Jan 2024 - Jun 2024)",
+      "links": [
+        "resume"
+      ],
+      "text": "- Built an AI-assisted Blood Bank Management System with a 5-person team and rolled it out to 3 hospitals. Interviewed 12+ coordinators to get the workflow right, then trained 20+ staff to replace their manual inventory tracking.\n- Trained Random Forest and Gradient Boosting models on 10K+ donation records to forecast blood shortages 7 days out, so hospitals could plan donor drives before they ran short.\n- Set up CI/CD with 85%+ Jest coverage, which brought bug turnaround down from 2 days to under 4 hours."
+    },
+    {
+      "title": "Experience: Web Development Intern at PrimaThink Technologies Limited (Jul 2023 - Dec 2023)",
+      "links": [
+        "resume"
+      ],
+      "text": "- Took an early-stage startup's first website from nothing to 12K+ users, owning everything from design to deployment.\n- Built the 25-page responsive site on JavaScript, React, and PHP, working with 3 founders and a designer, and ran biweekly demos to keep the launch backlog on track.\n- Was promoted to AI Full Stack Engineer after the launch, moving from front-end work into machine learning."
+    },
+    {
+      "title": "Experience: Machine Learning Intern at Tech Learn. Live (Jul 2021 - Dec 2021)",
+      "links": [
+        "resume"
+      ],
+      "text": "- Ran 6 ML experiments and improved accuracy on each, including a linear regression model for stock price movement and a symptom-based heart attack risk detector.\n- Trained and evaluated models in Python, Scikit-learn, and TensorFlow with a team of 3, testing classification, regression, and neural-network approaches.\n- Built reusable data pipelines (feature engineering, normalization, cross-validation) that the rest of a 4-intern cohort also used, and reported findings to 2 senior data scientists every week."
+    },
+    {
+      "title": "Education: MS, Robotics and Autonomous Systems (AI), Arizona State University (Aug 2024 - May 2026)",
+      "links": [],
+      "text": "Coursework in machine learning, computer vision, and robotics, focused on building autonomous systems that hold up outside a simulation. Hands-on projects in AI-driven control systems, multi-agent coordination, and sensor fusion. Research interest in autonomous systems that need to be reliable in practice, not just in theory."
+    },
+    {
+      "title": "Education: B.Tech in Artificial Intelligence, G. H. Raisoni Institute of Engineering and Technology (Aug 2020 - Jun 2024)",
+      "links": [],
+      "text": "Core coursework in machine learning, deep learning, NLP, and data structures. Led academic projects on mental health monitoring and stock price prediction. Worked as a grader and project lead, writing docs and helping other students debug their code."
+    },
+    {
+      "title": "Project: Multimodal AI Agent Runtime",
+      "links": [
+        "github"
+      ],
+      "text": "An agent that pulls from 5 live knowledge sources via RAG before responding, so answers stay grounded instead of drifting into generic LLM territory. A background job queue cut response wait from 20 seconds to 7 seconds. Built with Python, FastAPI, Claude, RAG, and ElevenLabs. No public demo or repository link is published on the portfolio for this project."
+    },
+    {
+      "title": "Project: Clippy",
+      "links": [
+        "clippy-github",
+        "clippy-page"
+      ],
+      "text": "A clipboard history app for Mac. Press Option+V, type what you remember about something you copied, and it finds it even if you forget the exact words. It skips passwords and card numbers, and deletes everything after a day. Tagged \"On-Device AI\" on the portfolio."
+    },
+    {
+      "title": "Project: FlipFlick",
+      "links": [
+        "flipflick-github",
+        "flipflick-page"
+      ],
+      "text": "A movie-decision app disguised as a slot machine: pick a vibe and get matched by a custom TF-IDF recommender scored on similarity, rating, and popularity. A softmax sampler keeps every reroll feeling fresh instead of repeating. Built with Python, FastAPI, scikit-learn, and Next.js. Tagged \"ML-Powered\"."
+    },
+    {
+      "title": "Project: Harmony (Mental Health Monitoring for Astronauts)",
+      "links": [
+        "harmony-demo"
+      ],
+      "text": "Led a team of 5 building a mental health monitoring platform for astronauts: LSTM and BERT models flagging distress signals, encrypted storage, and inference time cut from 1.4s to 0.9s. Built with Python, TensorFlow, LSTM, and BERT. 87% accuracy. A demo video is available."
+    },
+    {
+      "title": "Project: Maze Navigation with MyCobot Pro 600",
+      "links": [],
+      "text": "Autonomous maze-navigation system using ROS, OpenCV, and inverse kinematics, with a 92% success rate across 50+ trials. A Gazebo simulation cut iteration cycles from 3 hours to 45 minutes."
+    },
+    {
+      "title": "Project: Parksnese (Smart Parking Solution)",
+      "links": [],
+      "text": "Built an ML-based parking prediction system with a full IoT stack behind it, and pitched it to 3 investors. Cut parking search time by 40% in testing."
+    },
+    {
+      "title": "Project: Chalkboard AI",
+      "links": [],
+      "text": "Built a working website for an AI chalkboard in 3 weeks using Lovable AI and OpenAI, with real-time transcription and summarization to help students keep up in class."
+    },
+    {
+      "title": "Project: Stock Price Predictor (Published Research)",
+      "links": [],
+      "text": "Built a Q-learning model that processes 50K+ data points a day to generate trading signals, backtested to a 17% simulated ROI increase over six months. Tagged \"Published Research\" on the portfolio. Venue and publication details are not listed on the site."
+    },
+    {
+      "title": "Project: College Admission Predictor",
+      "links": [],
+      "text": "Built a prediction model with Random Forest and Logistic Regression that helped 129+ students find schools where they had better odds of getting in."
+    },
+    {
+      "title": "Project: Heart Disease Prediction",
+      "links": [],
+      "text": "Built an ML model with Random Forest and SVM that reached 91% accuracy, using an Apache Spark pipeline to handle large medical datasets."
+    },
+    {
+      "title": "Resume, contact and availability",
+      "links": [
+        "resume",
+        "contact",
+        "linkedin",
+        "github"
+      ],
+      "text": "- The resume is a one-page, ATS-friendly PDF, listed on the site as last updated August 2026.\n- Contact: through the contact form on the portfolio or the email address shown in its Contact section, or via LinkedIn and GitHub.\n- Location: Arizona, USA. Open to relocation.\n- Work authorization: F-1 STEM OPT, authorized for 3 years, no sponsorship required to start."
+    }
+  ],
+  "links": {
+    "site": {
+      "label": "Portfolio website",
+      "url": "https://anujwadi.com",
+      "kind": "site",
+      "description": "Anuj's portfolio"
+    },
+    "resume": {
+      "label": "Resume (PDF)",
+      "url": "https://anujwadi.com/RES_Anuj_Wadi.pdf",
+      "kind": "resume",
+      "description": "Current resume as published on the site"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/anujwadi/",
+      "kind": "contact",
+      "description": "Anuj's LinkedIn profile"
+    },
+    "github": {
+      "label": "GitHub profile",
+      "url": "https://github.com/AnujWadi-Git",
+      "kind": "code",
+      "description": "Anuj's GitHub profile"
+    },
+    "contact": {
+      "label": "Contact section",
+      "url": "https://anujwadi.com/#contact",
+      "kind": "contact",
+      "description": "Contact form and email on the portfolio"
+    },
+    "clippy-github": {
+      "label": "Clippy source",
+      "url": "https://github.com/AnujWadi-Git/Clippy",
+      "kind": "code",
+      "description": "Clippy repository"
+    },
+    "clippy-page": {
+      "label": "Clippy project page",
+      "url": "https://anujwadi.com/clippy/",
+      "kind": "project",
+      "description": "Clippy product page"
+    },
+    "flipflick-github": {
+      "label": "FlipFlick source",
+      "url": "https://github.com/AnujWadi-Git/FlipFlick",
+      "kind": "code",
+      "description": "FlipFlick repository"
+    },
+    "flipflick-page": {
+      "label": "FlipFlick project page",
+      "url": "https://anujwadi.com/flipflick/",
+      "kind": "project",
+      "description": "FlipFlick app page"
+    },
+    "harmony-demo": {
+      "label": "Harmony demo video",
+      "url": "https://drive.google.com/file/d/11J4Mu656-6q2fRNNWGK3DwYj99jvjTQz/preview",
+      "kind": "demo",
+      "description": "Demo video of Harmony"
+    }
+  }
+}

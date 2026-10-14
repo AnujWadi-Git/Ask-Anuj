@@ -1,0 +1,13 @@
+{
+  "_comment": "Registry of the ONLY links Ask Anuj may show. The model refers to ids; the server resolves them here. Verified live 2026-10-13.",
+  "site":            { "label": "Portfolio website",        "url": "https://anujwadi.com",                        "kind": "site",    "description": "Anuj's portfolio" },
+  "resume":          { "label": "Resume (PDF)",             "url": "https://anujwadi.com/RES_Anuj_Wadi.pdf",      "kind": "resume",  "description": "Current resume as published on the site" },
+  "linkedin":        { "label": "LinkedIn",                 "url": "https://www.linkedin.com/in/anujwadi/",       "kind": "contact", "description": "Anuj's LinkedIn profile" },
+  "github":          { "label": "GitHub profile",           "url": "https://github.com/AnujWadi-Git",             "kind": "code",    "description": "Anuj's GitHub profile" },
+  "contact":         { "label": "Contact section",          "url": "https://anujwadi.com/#contact",               "kind": "contact", "description": "Contact form and email on the portfolio" },
+  "clippy-github":   { "label": "Clippy source",            "url": "https://github.com/AnujWadi-Git/Clippy",      "kind": "code",    "description": "Clippy repository" },
+  "clippy-page":     { "label": "Clippy project page",      "url": "https://anujwadi.com/clippy/",                "kind": "project", "description": "Clippy product page" },
+  "flipflick-github":{ "label": "FlipFlick source",         "url": "https://github.com/AnujWadi-Git/FlipFlick",   "kind": "code",    "description": "FlipFlick repository" },
+  "flipflick-page":  { "label": "FlipFlick project page",   "url": "https://anujwadi.com/flipflick/",             "kind": "project", "description": "FlipFlick app page" },
+  "harmony-demo":    { "label": "Harmony demo video",       "url": "https://drive.google.com/file/d/11J4Mu656-6q2fRNNWGK3DwYj99jvjTQz/preview", "kind": "demo", "description": "Demo video of Harmony" }
+}

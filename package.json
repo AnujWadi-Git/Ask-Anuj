@@ -1,0 +1,18 @@
+{
+  "name": "ask-anuj",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Voice-first AI representative for anujwadi.com",
+  "scripts": {
+    "build:knowledge": "node scripts/build-knowledge.mjs",
+    "test": "node scripts/build-knowledge.mjs --check && node --test test/*.test.mjs",
+    "dev": "npm run build:knowledge && wrangler pages dev public --d1 DB=ask-anuj --compatibility-date=2025-09-01 --port 8788",
+    "db:init:local": "wrangler d1 execute ask-anuj --local --file=schema.sql",
+    "db:init:remote": "wrangler d1 execute ask-anuj --remote --file=schema.sql",
+    "deploy": "npm run build:knowledge && wrangler pages deploy public --project-name=ask-anuj"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
