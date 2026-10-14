@@ -31,3 +31,8 @@ on the Free plan Workers AI stops at 10,000 Neurons/day instead of billing.
 See [INTEGRATION.md](INTEGRATION.md): one `<script>` line in your site's `index.html`, edited wherever you keep the site (GitHub web editor or Cloudflare).
 
 Optional hardening: protect `/admin/*` and `/api/admin/*` with Cloudflare Access (Zero Trust, free up to 50 users) on top of the token.
+
+---
+## Current deployment (2026-10-13)
+Live at https://ask-anuj.pages.dev (Pages project `ask-anuj`, GitHub-connected, auto-deploys on push to `main`).
+Bindings `DB` (D1 `ask-anuj`) and `AI` (Workers AI); secrets `SESSION_SECRET`, `ADMIN_TOKEN` set in the dashboard.
